@@ -1,0 +1,24 @@
+parameters:
+
+    bass.user.listener: demo-bundle:bass/user-listener
+    authorization.filter: demo-bundle:filter/authorization-filter.js
+    socketio.service: demo-bundle:service/socketio.js
+
+services:
+
+    user.listener:
+        constructor: "%bass.user.listener%"
+        arguments: ['@service_container']
+        # tags:
+        #     - { name: bass.document.listener, listenerName: my.document.listener, event: prePersist, method: onPrePersist, priority: 8 }
+        #     
+    authorization.filter:
+        constructor: "%authorization.filter%"
+        arguments: ['@service_container'] 
+
+    socketio.service:
+        constructor: "%socketio.service%" 
+        arguments: ['@service_container']
+        tags:
+            - { name: websocket.event, namespace: '/server-status', event: 'client.connect', method: 'onConnect' }
+            - { name: websocket.event, namespace: '/server-status', event: 'client.disconnect', method: 'onDisconnect' }

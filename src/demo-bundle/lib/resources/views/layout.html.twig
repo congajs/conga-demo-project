@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>conga.js is running!</title>
+
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+        <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+
+        <script src="/socket.io/socket.io.js"></script>
+
+       	{{ assets('/css/all.css', 'css', ['/js/lib/bootstrap/dist/css/bootstrap.css', '/bundles/demo-bundle/css/styles.css']) }}
+
+    	{{ assets('/js/lib.js', 'javascript', ['/js/lib/jquery/dist/jquery.min.js','/bundles/conga-framework/js/conga.js']) }}
+
+        {{ conga_init('default') }}
+        {{ assets('/js/conga.plugins.js', 'javascript', ['/bundles/conga-socketio/js/conga-socketio.js']) }}
+
+        {{ assets('/js/src.js', 'javascript', ['/bundles/demo-bundle/js/*']) }}
+        
+    </head>
+    <body>
+
+    	{% include 'demo-bundle:includes/menu.html.twig' %}
+
+    	<div class="container">
+    		<div class="content-container">
+				{% block content %}{% endblock %}
+    		</div>
+    	</div>
+
+    </body>
+
+
+
+
+
+</html>

@@ -1,0 +1,28 @@
+{
+    "name": "##PROJECT_NAME##",
+    "version": "0.0.1",
+    "private": true,
+    "description": "##PROJECT_NAME##",
+    "license": "UNLICENSED",
+    "directories": {
+        "test": "test"
+    },
+    "main": "",
+    "scripts": {
+        "test": "mocha test/*.js"
+    },
+    "dependencies": {
+        "bass-nedb": "latest",
+        "conga-assets": "0.0.4",
+        "conga-bass": "0.0.8",
+        "conga-bower": "0.0.6",
+        "conga-framework": "0.0.26",
+        "conga-rest": "0.0.13",
+        "conga-twig": "latest",
+        "conga-socketio": "0.0.1",
+        "conga-validation": "0.0.3",
+        "pidusage": "1.0.4"
+    },
+    "devDependencies": {},
+    "readmeFilename": "README.md"
+}

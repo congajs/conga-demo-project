@@ -1,0 +1,32 @@
+{% extends "demo-bundle:layout.html.twig" %}
+
+{% block content %}
+
+	<div class="jumbotron">
+		<h1>Welcome to conga.js!!!</h1>
+		<p>Congratulations!!! Your Conga.js application is running!!!</p>
+	</div>
+
+	<h2>Live Server Info via socket.io</h2>
+
+	<div class="ct-chart" id="memory-chart">
+		<span class="title">Memory Usage</span>
+	</div>
+
+	<hr>
+
+	<div class="ct-chart" id="cpu-chart">
+		<span class="title">CPU Usage</span>
+	</div>
+
+	<hr />
+
+	<h2>Server OS Information (loaded via socket.io request)</h2>
+
+	<div class="server-info-container"></div>
+
+	<h2>Articles (loaded via local <a href="{{ url_for('posts.find.all') }}">API</a>)</h2>
+
+	<div class="blog-container"></div>
+
+{% endblock %}

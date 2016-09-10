@@ -1,0 +1,46 @@
+body {
+	padding-top: 70px;
+}
+
+.ct-series-a .ct-line {
+		stroke-width: 2px;
+}
+
+.ct-grids line {
+	color: #333333;
+}
+
+.ct-label {
+	font-size: .6em;
+	color: #CCCCCC;
+}
+
+.ct-grid {
+	stroke: #555555;
+}
+
+.ct-chart {
+	background-color: #000;
+	padding-top: 10px;
+}
+
+.ct-chart span.title {
+	text-align: center;
+	color: #CCCCCC;
+	width: 100%;
+	font-size: .75em;
+	display: block;
+	font-weight: bold;
+}
+
+#memory-chart .ct-line {
+	stroke: #00FF00;
+}
+
+#memory-chart .ct-area {
+	fill: #00FF00;
+}
+
+#cpu-chart .ct-line {
+	stroke: #FF69B4;
+}

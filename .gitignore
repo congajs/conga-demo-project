@@ -1,0 +1,9 @@
+app/config/parameters.ini
+app/public/bundles
+app/public/.bowerrc
+app/public/bower.json
+app/public/js/lib
+
+node_modules
+
+var/*/*
